@@ -49,7 +49,7 @@ export default class ListCategory extends Component {
                     {
                         categories && categories.map((category) => {
                             return (
-                                <li className="list-group-item" key={category.id} onClick={() => gantiKategori(category.nama)}><Icon nama={category.nama} />{category.nama}  </li>
+                                <li className={`list-group-item ${kategoriYangDipilih == category.nama && `kategori-aktif`}`} key={category.id} onClick={() => gantiKategori(category.nama)}><Icon nama={category.nama} />{category.nama}  </li>
                             )
                         })
                     }
