@@ -30,7 +30,7 @@ export default class App extends Component {
     this.setState({
         kategoriYangDipilih : value,
         menus : []
-    })
+    },()=>console.log(this.state.kategoriYangDipilih))
     Axios.get(API_URL + 'products?category.nama='+ value).then(res => {
       this.setState({
         menus: res.data

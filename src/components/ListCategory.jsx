@@ -42,19 +42,35 @@ export default class ListCategory extends Component {
         const { categories } = this.state
         const { gantiKategori, kategoriYangDipilih } = this.props
         return (
-            <div className="col-md-2 mt-2">
-                <h5><strong>Daftar Ketgori</strong></h5>
-                <hr />
-                <ul className="list-group" >
+            <>
+                {/* <div className="form-group">
+                    <label htmlFor="exampleFormControlSelect1">Example select</label>
                     {
-                        categories && categories.map((category) => {
-                            return (
-                                <li className={`list-group-item ${kategoriYangDipilih == category.nama && `kategori-aktif`}`} key={category.id} onClick={() => gantiKategori(category.nama)}><Icon nama={category.nama} />{category.nama}  </li>
-                            )
-                        })
+                        <select className="form-control" id="exampleFormControlSelect1" onChange={(e) => gantiKategori(e.target.value)} >
+                                {
+                                    categories && categories.map((category) => {
+                                      return  <option onChange={() => console.log('jalan')} value={category.name}>{category.nama}</option>
+                                    })
+                                }
+                                
+                        </select>
                     }
-                </ul>
-            </div>
+                </div> */}
+
+                <div className="col-md-2 mt-2">
+                    <h5><strong>Daftar Ketgori</strong></h5>
+                    <hr />
+                    <ul className="list-group" >
+                        {
+                            categories && categories.map((category) => {
+                                return (
+                                    <li className={`list-group-item ${kategoriYangDipilih == category.nama && `kategori-aktif`}`} key={category.id} onClick={() => gantiKategori(category.nama)}><Icon nama={category.nama} />{category.nama}  </li>
+                                )
+                            })
+                        }
+                    </ul>
+                </div>
+            </>
         )
     }
 }
