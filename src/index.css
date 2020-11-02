@@ -19,3 +19,6 @@ code {
   background-color: #05c46b !important;
   color: #ffffff; 
 }
+.card{
+  cursor: pointer !important;
+}
