@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { TotalBayar } from '.'
 import { numberFormat } from '../utils/Utils'
 
 export default class HasilCategory extends Component {
@@ -36,6 +37,7 @@ export default class HasilCategory extends Component {
                         </ul>
                     )
                 }
+                <TotalBayar keranjangs={keranjangs} />
             </div>
         )
     }
